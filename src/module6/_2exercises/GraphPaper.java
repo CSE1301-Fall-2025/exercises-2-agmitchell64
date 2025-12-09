@@ -20,22 +20,28 @@ public class GraphPaper {
 		// draw one horizontal and one vertical line to quadrisect
 		//  the square (divide into 4 portions). Your code goes
 		//  below here:
-		//
-		
+		StdDraw.line(llx + (size/2),lly,llx + (size/2),lly + size);
+		StdDraw.line(llx, lly + (size/2), llx + size, lly + (size/2)); 
 		// 
 		// Now, after you have drown athose two lines,
 		// let's pause to accentuate the recursive drama
 		//
-		StdDraw.pause(500);
+		StdDraw.pause(0);
 		//
 		//
 		// Now recursively consider the
 		//   lower left, uppert left, upper right, lower right
 		//   subcases
 		//   Your code for those subcases should go below here:
-		//
+		//lower left 
+		gp(llx, lly, size/2);
+		//upper left 
+		gp(llx, lly + (size/2),size/2);
+		//upper right 
+		gp(llx + (size/2), lly + (size/2), size/2);
+		// lower right
+		gp ( llx + (size/2), lly, size/2); 
 
-		
 	}
 
 	public static void main(String[] args) {
